@@ -1,9 +1,9 @@
-const canvas = document.querySelector('#canvas');
-const ctx = canvas.getContext('2d');
-const drawColor = document.querySelector('#color')
+const canvas         = document.querySelector('#canvas');
+const ctx            = canvas.getContext('2d');
+const drawColor      = document.querySelector('#color')
 const lineWidthInput = document.querySelector('#lineWidth');
 
-canvas.width = canvas.offsetWidth;
+canvas.width  = canvas.offsetWidth;
 canvas.height = canvas.offsetHeight;
 
 let position = {
@@ -26,7 +26,7 @@ document.addEventListener("mouseup", () => {
 
 // Change line with and color
 
-let color = "black";
+let color     = "black";
 let lineWidth = 5;
 
 document.addEventListener("change", () => {
@@ -45,8 +45,8 @@ function reposition(e) {
 // Render all
 function draw(e) {
     ctx.beginPath();
-    ctx.lineWidth = lineWidth;
-    ctx.lineCap = "round";
+    ctx.lineWidth   = lineWidth;
+    ctx.lineCap     = "round";
     ctx.strokeStyle = color;
     ctx.moveTo(position.x, position.y);
     reposition(e);
